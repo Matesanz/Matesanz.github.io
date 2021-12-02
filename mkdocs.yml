@@ -1,0 +1,7 @@
+site_name: Matesanz Landing
+theme:
+  name: material
+
+extra:
+  version:
+    provider: mike
