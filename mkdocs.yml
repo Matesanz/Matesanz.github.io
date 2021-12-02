@@ -1,7 +1,6 @@
-site_name: Matesanz Landing
+site_name: Andrés Matesanz
 theme:
   name: material
-
-extra:
-  version:
-    provider: mike
+  icon:
+    logo: material/face-man-outline
+  favicon: images/favicon.png
