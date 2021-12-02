@@ -1,4 +1,19 @@
+# Project information
 site_name: Andrés Matesanz
+site_url: https://matesanz.github.io/
+site_author: Andrés Matesanz
+site_description: >-
+  Know more about me on my personal web page.
+
+# Repository
+repo_name: Matesanz/Matesanz.github.io
+repo_url: https://github.com/Matesanz/Matesanz.github.io
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2016 - 2021 Andrés Matesanz
+
+# Configuration
 theme:
   name: material
   icon:
