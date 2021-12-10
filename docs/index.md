@@ -1,12 +1,22 @@
 # 👋 Hi, I'm Andrés! 
 
-I'm a **Computer Vision Developer** who tries to make computers see. And I really enjoy it! 😁 I give talks about **Artificial Intelligence** and I'm really interested in **robotics** 🦾 I also like board games, doing sports, playing guitar or just being with my friends. 
+I'm a **Python R+D Software Developer** who takes new ideas into practice. And I really enjoy it! 😁 I give talks about **Artificial Intelligence** and I'm really interested in **AI, Data and robotics** 🦾 I also like board games, doing sports, playing guitar or just being with my friends.
 
-## What do I do?
+- 🎓 [Education](/background/education)
+- 👷 [Professional Experience](/background/experience)
+- 📢 Talks (🚧 Work in Progress 🚧)
+- 💡 Side Projects (🚧 Work in Progress 🚧)
 
-- 🦾 I work in **applied robotics** as R+D related to computer vision
-- 🐋 I use **ROS** and **docker** to deploy code into **IoT** systems
-- 🚀 I like to fly in FPV with my **hand-made racing drone**
-- 🧠 I'm co-founder of the **local association of Artificial Intelligence**
-- 👓 I have also developed some **Virtual Reality Experiences using UE4**.
+## 🙂 What do I like?
 
+- 🐍 I'm good at **Python**, it's my preferred programming language.
+- 🐋 I like using **Docker** from personal projects to production.
+- 🦾 I love to investigate about **IA** and **Data**.
+- 👷 I like to automate development processes (CI/CD).
+- 🧠 I'm co-founder of the [**Malaga association of Artificial Intelligence**](https://twitter.com/aimalaga)
+
+
+## 🔍 Where can you find me?
+
+- 🐦 **Twitter**: [@AIMatesanz](https://twitter.com/aimatesanz)
+- 💻 **Github**: [@Matesanz](https://github.com/Matesanz)
