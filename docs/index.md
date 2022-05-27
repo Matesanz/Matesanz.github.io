@@ -4,7 +4,7 @@ I'm a **Python R+D Software Developer** who takes new ideas into practice. And I
 
 - 🎓 [Education](/background/education)
 - 👷 [Professional Experience](/background/experience)
-- 📢 [Talks](talks.md)
+- 🗣️ [Talks](talks.md)
 - 💡 Side Projects (🚧 Work in Progress 🚧)
 
 ## 🙂 What do I like?
