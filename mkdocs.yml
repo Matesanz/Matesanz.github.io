@@ -23,6 +23,7 @@ theme:
     - navigation.instant
     - navigation.sections
     - navigation.top
+
 # Extras
 extra:
   social:
@@ -30,3 +31,8 @@ extra:
       link: https://twitter.com/aimatesanz
       name: Matesanz on Twitter
   generator: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
