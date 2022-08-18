@@ -1,5 +1,12 @@
 # 🗣️ Talks
 
+## 🐋 Intro to Devcontainers - (2022-05-27)
+
+**Developing inside a Docker container** on VSCode and get **full control of my environment** (not only python dependencies and versions but also the OS or the system requirements) is just perfect in order to ease the entrypoint to any colleague to start developing on the same repo and sets it up ready for production. **This technology really amazes me**. Since I discovered this tool at a local python talk I've been using it for every single project (just check my Github 😅). So I talked about it to my colleagues at Sngular 🎉 and they also loved it 💙.
+
+!!! warning
+    Link to video is not yet available 😔
+
 ## 😄 Analyzing Face Expressions - (2022-05-11)
 
 This talk was the culmination of a side project I was working on. My goal was to **detect the expressions of any face and show the complete pipeline**: data acquisition through the detection of key points of the face, normalization of the data to suppress face rotation, data labeling based on facial expression (**normal, angry, happy, sad, surprised,** and **winking**), training a simple k-nearest model for face classification expressions and implementation (inference) using the web cam. This talk was very interactive since [anyone can use the project through its official page](https://share.streamlit.io/matesanz/face-expression-recognition/main/app/main.py).
