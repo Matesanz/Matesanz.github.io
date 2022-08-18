@@ -16,7 +16,7 @@ This talk was the culmination of a side project I was working on. My goal was to
 
 ## 🐈 Detecting your Pet using AI - (2021-01-30)
 
-I took like **houndreds of pictures of Mocka**, one of my cats 😂, just to make sure that my model performed good enough to show it in front of all the viewers of the **[TabularConf 2021](https://tabularconf.es/#about)** (My first appearance in a national congress 💪). I used a great **library [ImageAI](https://github.com/OlafenwaMoses/ImageAI)** (kudos to [Olafenwa](https://github.com/OlafenwaMoses) 🙏) to train a **Yolov3 model** easily and show people in a simple Jupyter Notebook how to replicate my results. I also showed how **object detection models are validated using the mAP metric**
+I took like **hundreds of pictures of Mocka**, one of my cats 😂, just to make sure that my model performed good enough to show it in front of all the viewers of the **[TabularConf 2021](https://tabularconf.es/#about)** (My first appearance in a national congress 💪). I used a great **library [ImageAI](https://github.com/OlafenwaMoses/ImageAI)** (kudos to [Olafenwa](https://github.com/OlafenwaMoses) 🙏) to train a **Yolov3 model** easily and show people in a simple Jupyter Notebook how to replicate my results. I also showed how **object detection models are validated using the mAP metric**
 
 !!! tip
     You can find **the code** to this talk in [my GitHub](https://github.com/Matesanz/pet-detector).
