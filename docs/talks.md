@@ -1,5 +1,19 @@
 # 🗣️ Talks
 
+## 😄 Analyzing Face Expressions - (2022-05-11)
+
+This talk was the culmination of a side project I was working on. My goal was to **detect the expressions of any face and show the complete pipeline**: data acquisition through the detection of key points of the face, normalization of the data to suppress face rotation, data labeling based on facial expression (**normal, angry, happy, sad, surprised,** and **winking**), training a simple k-nearest model for face classification expressions and implementation (inference) using the web cam. This talk was very interactive since [anyone can use the project through its official page](https://share.streamlit.io/matesanz/face-expression-recognition/main/app/main.py).
+
+!!! tip
+    You can **play with this project** [in its official page](https://share.streamlit.io/matesanz/face-expression-recognition/main/app/main.py).
+
+!!! tip
+    You can find **the code** to this talk in [my GitHub](https://github.com/Matesanz/face-expression-recognition).
+
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Que chulo el taller de <a href="https://twitter.com/AIMatesanz?ref_src=twsrc%5Etfw">@AIMatesanz</a> en <a href="https://twitter.com/hashtag/FuturoInteligente?src=hash&amp;ref_src=twsrc%5Etfw">#FuturoInteligente</a> <a href="https://twitter.com/sngular?ref_src=twsrc%5Etfw">@sngular</a> con entrenamiento en vivo <a href="https://t.co/0nLQsZbV0d">pic.twitter.com/0nLQsZbV0d</a></p>&mdash; Carmen Bartolome (@trebool) <a href="https://twitter.com/trebool/status/1524363595605286912?ref_src=twsrc%5Etfw">May 11, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">El final de la mañana en <a href="https://twitter.com/hashtag/FUTUROinteligente?src=hash&amp;ref_src=twsrc%5Etfw">#FUTUROinteligente</a> es la parte más práctica con el taller de <a href="https://twitter.com/AIMatesanz?ref_src=twsrc%5Etfw">@AIMatesanz</a> sobre visión artificial y reconocimiento de emociones <a href="https://t.co/o2NYnUSWvY">pic.twitter.com/o2NYnUSWvY</a></p>&mdash; Javier Martin (@loogic) <a href="https://twitter.com/loogic/status/1524363484498169863?ref_src=twsrc%5Etfw">May 11, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## 🐈 Detecting your Pet using AI - (2021-01-30)
 
 I took like **houndreds of pictures of Mocka**, one of my cats 😂, just to make sure that my model performed good enough to show it in front of all the viewers of the **[TabularConf 2021](https://tabularconf.es/#about)** (My first appearance in a national congress 💪). I used a great **library [ImageAI](https://github.com/OlafenwaMoses/ImageAI)** (kudos to [Olafenwa](https://github.com/OlafenwaMoses) 🙏) to train a **Yolov3 model** easily and show people in a simple Jupyter Notebook how to replicate my results. I also showed how **object detection models are validated using the mAP metric**
