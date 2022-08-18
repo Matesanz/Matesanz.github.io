@@ -47,6 +47,24 @@ I took like **hundreds of pictures of Mocka**, one of my cats 😂, just to make
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+## 🤖 Intro to Python and Reinforcement Learning - (2020-03 / 2020-04)
+
+As the **organizers of the Malaga AI association** me and my friend [Quino](https://www.linkedin.com/in/quinoterrasa/) conducted an introductory course on reinforcement learning and python with the colaboration of the [Spain AI Association](https://www.spain-ai.com/). It consisted on 6 lessons where we talked about the basics of python and showed how to train an agent using Open AI gym library and Tensorflow to solve the cartpole problem. It would have been face-to-face, but finally, thanks to Covid, we did it online, reaching up to 200 students per class. 🎉
+
+!!! success
+    You can find **the video** to this talk in [YouTube](https://www.youtube.com/watch?v=yzJsAr5MxtM&t=14s) (🇪🇸 It is in spanish though...).
+
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">🤫Os contaré un secreto:<br><br>Una de las cosas que más me gusta cuando trato de enseñar algo es reducirlo al concepto más sencillo y &quot;evidente&quot; y para ello me preparo con imágenes💡<br><br>Aquí el ejemplo del Algoritmo DQN, famoso por ser el utilizado por <a href="https://twitter.com/DeepMind?ref_src=twsrc%5Etfw">@DeepMind</a> en <a href="https://twitter.com/hashtag/AlphaGo?src=hash&amp;ref_src=twsrc%5Etfw">#AlphaGo</a> 🔥 <a href="https://t.co/gQcZfHtc5M">pic.twitter.com/gQcZfHtc5M</a></p>&mdash; Matesanz (@AIMatesanz) <a href="https://twitter.com/AIMatesanz/status/1244576579713470464?ref_src=twsrc%5Etfw">March 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## 🧙 Intro to Generative Adversarial Networks - (2020-17-03)
+
+Covid hit us and the world stopped, but **impressive movements soon began to emerge**. One of them organized by young people tried to bring programming knowledge to the whole world. And **this is how the CoronaConf came about**. I was one of the first to raise my hand to volunteer and ended up **giving a talk on the introduction to Generative Adversarial Networks**. To do this, I brought to the talk the first chapters of the magnificent book **[Generative Deep Learning](https://www.oreilly.com/library/view/generative-deep-learning/9781492041931/)** by David Foster.
+
+!!! success
+    You can find **the video** down here 👇 (🇪🇸 It is in spanish though...).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aQtt2eKE2Bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 🖌️ Intro to Artificial Creativity - (2020-02-26)
 
 Wow, I remember that one being a really good talk. Back then I was doing my **Master's thesis on Generative Adversarial Networks** and I was fascinated by what they could do. So I gave a **gentle introduction to GANs** at [Demium](https://demium.com). It was really funny, I learnt from my previous talks what to do and I interacted a lot more with the people there and I condensed in one hour, not only the main points of GANs, but also **the code on how to reproduce them using tensorflow** and some **practical applications that could hit in the near future**. I still remember that part of the Will Smith's movie "I Robot" (published just 10 years before) where it was suggested that only human beings could compose a symphony or paint an art master piece.
