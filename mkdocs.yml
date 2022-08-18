@@ -30,6 +30,12 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/aimatesanz
       name: Matesanz on Twitter
+    - icon: fontawesome/brands/github
+      link: https://github.com/matesanz
+      name: Matesanz on Github
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/aimatesanz/
+      name: Matesanz on Linkedin
   generator: false
 
 markdown_extensions:
