@@ -1,0 +1,18 @@
+---
+interface Props {
+  tweetUrl: string;
+  lang?: string;
+}
+
+const { tweetUrl, lang = 'es' } = Astro.props;
+// Extract tweet ID from URL
+const tweetId = tweetUrl.split('/').pop()?.split('?')[0] ?? '';
+---
+
+<div class="tweet-embed my-4">
+  <blockquote class="twitter-tweet" data-lang={lang}>
+    <a href={tweetUrl}></a>
+  </blockquote>
+</div>
+
+<script is:inline src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script>

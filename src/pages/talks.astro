@@ -1,0 +1,198 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import YouTubeEmbed from '../components/YouTubeEmbed.astro';
+---
+
+<BaseLayout
+  title="Talks — Andrés Matesanz"
+  description="Conference talks and workshops by Andrés Matesanz on AI, Machine Learning, Docker and more."
+>
+  <h1 class="text-3xl font-bold text-gray-900 mb-2">🗣️ Talks</h1>
+  <p class="text-gray-500 mb-10">Conferences, workshops and courses I've given on AI, Machine Learning and more.</p>
+
+  <div class="space-y-8">
+
+    <!-- Talk 1: Devcontainers -->
+    <div class="card">
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
+        <h2 class="text-xl font-semibold text-gray-900">🐋 Intro to Devcontainers</h2>
+        <span class="text-sm text-indigo-600 font-medium whitespace-nowrap">2022-05-27</span>
+      </div>
+      <p class="text-gray-700 leading-relaxed text-sm">
+        <strong>Developing inside a Docker container</strong> on VSCode gives you full control of your environment —
+        not just Python dependencies but also the OS and system requirements. This makes it trivially easy for
+        colleagues to start developing in the same repo. Since I discovered this tool I've been using it for every
+        single project. I gave this talk to my colleagues at Sngular 🎉 and they loved it 💙.
+      </p>
+      <div class="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800">
+        ⚠️ Video not yet available.
+      </div>
+    </div>
+
+    <!-- Talk 2: Face Expressions -->
+    <div class="card">
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
+        <h2 class="text-xl font-semibold text-gray-900">😄 Analyzing Face Expressions</h2>
+        <span class="text-sm text-indigo-600 font-medium whitespace-nowrap">2022-05-11</span>
+      </div>
+      <p class="text-gray-700 leading-relaxed text-sm mb-4">
+        The culmination of a side project: detect facial expressions and show the complete pipeline — data acquisition
+        through face key-point detection, normalization to suppress rotation, data labeling (normal, angry, happy, sad,
+        surprised, winking), training a k-NN classifier and live webcam inference.
+        This talk was very interactive since anyone could use the project live.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <a href="https://share.streamlit.io/matesanz/face-expression-recognition/main/app/main.py" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs px-3 py-1.5">
+          🚀 Live Demo
+        </a>
+        <a href="https://github.com/Matesanz/face-expression-recognition" target="_blank" rel="noopener noreferrer" class="btn-outline text-xs px-3 py-1.5">
+          💻 Code
+        </a>
+      </div>
+      <!-- Twitter embeds -->
+      <div class="space-y-2">
+        <blockquote class="twitter-tweet" data-lang="es">
+          <a href="https://twitter.com/trebool/status/1524363595605286912"></a>
+        </blockquote>
+        <blockquote class="twitter-tweet" data-lang="es">
+          <a href="https://twitter.com/loogic/status/1524363484498169863"></a>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Talk 3: RL Bootcamp -->
+    <div class="card">
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
+        <h2 class="text-xl font-semibold text-gray-900">🤖 Reinforcement Learning and Python Bootcamp</h2>
+        <span class="text-sm text-indigo-600 font-medium whitespace-nowrap">Oct – Nov 2021</span>
+      </div>
+      <p class="text-gray-700 leading-relaxed text-sm mb-4">
+        As organizer of the Malaga AI association, I conducted an introductory course on deep learning applied to robotics
+        (Python + TensorFlow + Docker) for <strong>8 lessons over 2 months</strong>. Students from diverse engineering
+        fields learned to set up their IDE, Python basics, trained an RL agent for CartPole using TensorFlow, and saw
+        how this applies to robotics with ROS. The most challenging course I've given — and the one I learned the most from! 🤓
+      </p>
+      <!-- Twitter embeds -->
+      <div class="space-y-2">
+        <blockquote class="twitter-tweet" data-lang="es">
+          <a href="https://twitter.com/Spain_AI_/status/1450502797368115202"></a>
+        </blockquote>
+        <blockquote class="twitter-tweet" data-lang="es">
+          <a href="https://twitter.com/AIMatesanz/status/1461394395639521284"></a>
+        </blockquote>
+        <blockquote class="twitter-tweet" data-lang="es">
+          <a href="https://twitter.com/AIMatesanz/status/1459496833995218945"></a>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Talk 4: Pet Detector -->
+    <div class="card">
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
+        <h2 class="text-xl font-semibold text-gray-900">🐈 Detecting your Pet using AI</h2>
+        <span class="text-sm text-indigo-600 font-medium whitespace-nowrap">2021-01-30</span>
+      </div>
+      <p class="text-gray-700 leading-relaxed text-sm mb-4">
+        I took hundreds of pictures of Mocka, one of my cats 😂, to show at <strong>TabularConf 2021</strong> (my first
+        national congress 💪). Using the <a href="https://github.com/OlafenwaMoses/ImageAI" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">ImageAI</a> library,
+        I trained a <strong>YOLOv3 model</strong> in a Jupyter Notebook and showed how object detection models are validated
+        using the <strong>mAP metric</strong>.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <a href="https://www.youtube.com/watch?v=Fr8t0SuHASA" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs px-3 py-1.5">
+          ▶ Watch Video (🇪🇸)
+        </a>
+        <a href="https://github.com/Matesanz/pet-detector" target="_blank" rel="noopener noreferrer" class="btn-outline text-xs px-3 py-1.5">
+          💻 Code
+        </a>
+      </div>
+      <div class="space-y-2">
+        <blockquote class="twitter-tweet" data-lang="es">
+          <a href="https://twitter.com/AIMatesanz/status/1355254413393350659"></a>
+        </blockquote>
+        <blockquote class="twitter-tweet" data-lang="es">
+          <a href="https://twitter.com/TabularConf/status/1343602988850548740"></a>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Talk 5: Intro to Python & RL -->
+    <div class="card">
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
+        <h2 class="text-xl font-semibold text-gray-900">🤖 Intro to Python and Reinforcement Learning</h2>
+        <span class="text-sm text-indigo-600 font-medium whitespace-nowrap">Mar – Apr 2020</span>
+      </div>
+      <p class="text-gray-700 leading-relaxed text-sm mb-4">
+        With my friend <a href="https://www.linkedin.com/in/quinoterrasa/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Quino</a> and the
+        <a href="https://www.spain-ai.com/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Spain AI Association</a>,
+        we ran a <strong>6-lesson introductory course</strong> on Python basics and Reinforcement Learning.
+        Thanks to Covid, we moved it online, reaching <strong>up to 200 students per class</strong>. 🎉
+        Students trained an RL agent using OpenAI Gym + TensorFlow to solve the CartPole problem.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <a href="https://www.youtube.com/watch?v=yzJsAr5MxtM&t=14s" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs px-3 py-1.5">
+          ▶ Watch Video (🇪🇸)
+        </a>
+      </div>
+      <blockquote class="twitter-tweet" data-lang="es">
+        <a href="https://twitter.com/AIMatesanz/status/1244576579713470464"></a>
+      </blockquote>
+    </div>
+
+    <!-- Talk 6: GANs - CoronaConf -->
+    <div class="card">
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
+        <h2 class="text-xl font-semibold text-gray-900">🧙 Intro to Generative Adversarial Networks</h2>
+        <span class="text-sm text-indigo-600 font-medium whitespace-nowrap">2020-03-17 — CoronaConf</span>
+      </div>
+      <p class="text-gray-700 leading-relaxed text-sm mb-4">
+        Covid hit and the world stopped — but impressive movements emerged. The <strong>CoronaConf</strong> brought
+        programming knowledge to everyone. I volunteered to give an intro to <strong>Generative Adversarial Networks</strong>,
+        drawing from the magnificent book{' '}
+        <a href="https://www.oreilly.com/library/view/generative-deep-learning/9781492041931/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">
+          Generative Deep Learning
+        </a>{' '}
+        by David Foster.
+      </p>
+      <YouTubeEmbed id="aQtt2eKE2Bc" title="Intro to GANs — CoronaConf 2020" />
+    </div>
+
+    <!-- Talk 7: Artificial Creativity -->
+    <div class="card">
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
+        <h2 class="text-xl font-semibold text-gray-900">🖌️ Intro to Artificial Creativity</h2>
+        <span class="text-sm text-indigo-600 font-medium whitespace-nowrap">2020-02-26 — Demium</span>
+      </div>
+      <p class="text-gray-700 leading-relaxed text-sm mb-4">
+        While working on my Master's thesis on GANs I gave a <strong>gentle introduction to Generative Adversarial Networks</strong>
+        at <a href="https://demium.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">Demium</a>.
+        In one hour I covered the main concepts of GANs, live code with TensorFlow,
+        and practical near-future applications. Still remember the Will Smith "I, Robot" reference 😄
+      </p>
+      <blockquote class="twitter-tweet" data-lang="en">
+        <a href="https://twitter.com/AIMatesanz/status/1233148439321612290"></a>
+      </blockquote>
+    </div>
+
+    <!-- Talk 8: I See Nets -->
+    <div class="card">
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
+        <h2 class="text-xl font-semibold text-gray-900">👁️ I See Nets — CNN Architectures</h2>
+        <span class="text-sm text-indigo-600 font-medium whitespace-nowrap">2019-03-20 — School of AI</span>
+      </div>
+      <p class="text-gray-700 leading-relaxed text-sm mb-4">
+        My <strong>first ever talk</strong>! I spoke about <strong>CNN architectures</strong> — how convolutional layers
+        work, how to train them, selecting hyperparameters, and showed TensorFlow code. I did it in <strong>English</strong>
+        (what an achievement 💪) for the <strong>School of AI association</strong> that me and friends started months before.
+        I was terrified, but it went great!
+      </p>
+      <blockquote class="twitter-tweet" data-lang="en">
+        <a href="https://twitter.com/AIMatesanz/status/1108145653836861442"></a>
+      </blockquote>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<!-- Twitter widgets script (loads all embeds) -->
+<script is:inline async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

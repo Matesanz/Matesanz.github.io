@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TimelineEntry from '../components/TimelineEntry.astro';
+---
+
+<BaseLayout
+  title="Experience — Andrés Matesanz"
+  description="Professional experience of Andrés Matesanz: R&D Developer in AI, Computer Vision and Data Engineering."
+>
+  <h1 class="text-3xl font-bold text-gray-900 mb-2">🧑‍💻 Professional Experience</h1>
+  <p class="text-gray-500 mb-10">
+    My main professional roles. I have more — if you want to know about my full experience, ask me! 🙂
+  </p>
+
+  <!-- Jump links -->
+  <div class="flex flex-wrap gap-2 mb-10">
+    <a href="#aeorum" class="btn-outline text-xs px-3 py-1.5">🧑‍🔬 Aeorum</a>
+    <a href="#uma" class="btn-outline text-xs px-3 py-1.5">🧑‍🔬 Univ. Malaga</a>
+    <a href="#monkeat" class="btn-outline text-xs px-3 py-1.5">🕵️ Monkeat</a>
+  </div>
+
+  <div class="relative">
+
+    <!-- Aeorum -->
+    <div id="aeorum">
+      <TimelineEntry
+        title="R+D Developer: Data, AI and Computer Vision"
+        subtitle="Aeorum"
+        period="Aug 2020 – Present"
+      >
+        <p class="text-sm text-gray-700 leading-relaxed mb-4">
+          Developing solutions across multiple R&D fields using deep learning, data engineering, and computer vision.
+        </p>
+        <div class="space-y-3">
+          <div>
+            <h4 class="text-sm font-semibold text-gray-800 mb-1">🤖 Deep Learning</h4>
+            <p class="text-sm text-gray-600">
+              Implementing perception in unmanned aerial vehicles using <strong>deep neural networks</strong> (YOLO, SSD-MobileNet)
+              and classic computer vision. Training and deploying models on GPU and embedded systems with <strong>C++</strong>,
+              <strong>Docker</strong>, <strong>Python</strong> and <strong>ROS</strong>.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-800 mb-1">📊 Data Engineering</h4>
+            <p class="text-sm text-gray-600">
+              Built the company's data layer from scratch: big data processing with <strong>Spark</strong>, real-time processing
+              with <strong>Kafka</strong>, and database design with <strong>MongoDB</strong>, <strong>MySQL</strong> and <strong>Redis</strong>.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-800 mb-1">🏗️ Structure from Motion</h4>
+            <p class="text-sm text-gray-600">
+              Building 3D point cloud reconstructions from 2D drone images.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-800 mb-1">🌱 Plant Health Analysis</h4>
+            <p class="text-sm text-gray-600">
+              Research project using special cameras to retrieve field health status — building wavelength orthomosaics
+              for agronomists.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-800 mb-1">☀️ Photovoltaic Panels Analysis</h4>
+            <p class="text-sm text-gray-600">
+              Research project detecting anomalous thermal registries on photovoltaic cells using infrared cameras.
+            </p>
+          </div>
+        </div>
+      </TimelineEntry>
+    </div>
+
+    <!-- University of Malaga -->
+    <div id="uma">
+      <TimelineEntry
+        title="R+D Developer: AI and Computer Vision"
+        subtitle="University of Malaga — Smart-Campus Projects"
+        period="Dec 2018 – Mar 2020"
+      >
+        <p class="text-sm text-gray-700 leading-relaxed mb-4">
+          Part of the Smart-Campus I projects (<a href="https://github.com/Matesanz/DIAS2P" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">DIAS2P</a> and{' '}
+          <a href="https://github.com/Matesanz/StreetQR" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">StreetQR</a>):
+          built a solution to reduce car-pedestrian collisions by attaching embedded systems running object detection
+          neural networks into traffic signs. The{' '}
+          <a href="https://riuma.uma.es/xmlui/bitstream/handle/10630/18443/CIPI_2019_paper_37.pdf" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">paper was published at CIPI 2019</a>.
+        </p>
+        <div class="space-y-3">
+          <div>
+            <h4 class="text-sm font-semibold text-gray-800 mb-1">🤖 Deep Learning</h4>
+            <p class="text-sm text-gray-600">
+              Training YOLO, SSD-MobileNet and Mask-RCNN for real-time pedestrian-collision detection.
+              Deployment on <strong>Jetson Nano</strong>. Object tracking with the Hungarian Algorithm.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-800 mb-1">⚡ Electronics</h4>
+            <p class="text-sm text-gray-600">
+              Designing electronic architecture to run actuators (sound and lights) warning drivers of pedestrian presence.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-800 mb-1">📊 Data</h4>
+            <p class="text-sm text-gray-600">
+              Built an API using <strong>Firebase</strong> to record statistics on car and pedestrian crossings.
+            </p>
+          </div>
+        </div>
+      </TimelineEntry>
+    </div>
+
+    <!-- Monkeat -->
+    <div id="monkeat">
+      <TimelineEntry
+        title="Full-Stack Developer & CTO"
+        subtitle="Monkeat — Startup (Demium Incubation Program)"
+        period="Mar 2019 – Oct 2019"
+      >
+        <p class="text-sm text-gray-700 leading-relaxed">
+          Co-founded <strong>Monkeat</strong>, a live-time marketplace helping pubs boost customer acquisition through
+          real-time offers. As CTO, developed a full <strong>Progressive Web App</strong> using <strong>Vue + Ionic</strong>,
+          <strong>MongoDB</strong>, <strong>Flask</strong> and <strong>Firebase</strong>. We could not finally validate our
+          MVP and closed the project after a few months — but it was a great learning experience!
+        </p>
+      </TimelineEntry>
+    </div>
+
+  </div>
+</BaseLayout>
