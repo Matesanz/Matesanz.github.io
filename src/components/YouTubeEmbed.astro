@@ -1,0 +1,19 @@
+---
+interface Props {
+  id: string;
+  title?: string;
+}
+
+const { id, title = 'YouTube video' } = Astro.props;
+---
+
+<div class="relative w-full aspect-video rounded-lg overflow-hidden my-4">
+  <iframe
+    src={`https://www.youtube.com/embed/${id}`}
+    title={title}
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    class="absolute inset-0 w-full h-full"
+  ></iframe>
+</div>
