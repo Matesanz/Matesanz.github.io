@@ -54,8 +54,14 @@ Follow conventional commit format:
 
 Example: `feat: add dark mode toggle to settings`
 
+**Author**: Always set the commit author to the AI model being used:
+```bash
+git commit --author="Claude Sonnet <claude-sonnet@anthropic.com>" -m "..."
+```
+
 ## Project-Specific Notes
 
 - This is an Astro-based personal website hosted on GitHub Pages
 - Profile images are stored in `/public/` directory
 - Main page is at `src/pages/index.astro`
+- **Language**: All user-facing content (titles, labels, descriptions) must be in **English**, even if the original talk/event was given in Spanish. Translate any Spanish titles before adding them to the site.
