@@ -9,7 +9,7 @@ const navLinks = [
   { href: '/cv', label: 'CV' },
 ];
 
-const pathname = Astro.url.pathname;
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 
 <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
