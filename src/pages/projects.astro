@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { projects } from '../data/projects';
+
+// Group labels for the jump-links bar, in display order
+const jumpGroups = [
+  { id: 'labster-accessibility-ai',    label: '📅 2026' },
+  { id: 'labster-automation',          label: '📅 2025' },
+  { id: 'uve-valuation-ai',            label: '📅 2024' },
+  { id: 'junction-2023-rag',           label: '📅 2023' },
+  { id: 'face-expression-recognition', label: '📅 2022' },
+  { id: 'pet-detector',                label: '📅 2021' },
+  { id: 'aeorum-orthophotos',          label: '📅 2020' },
+  { id: 'monkeat-pwa',                 label: '📅 2019' },
+  { id: 'malaga-ai-association',       label: '📅 2018' },
+];
+---
+
+<BaseLayout
+  title="Projects — Andrés Matesanz"
+  description="Projects by Andrés Matesanz: AI automation, computer vision, data engineering and more."
+>
+  <h1 class="text-3xl font-bold text-gray-900 mb-2">📂 Projects</h1>
+  <p class="text-gray-500 mb-10">
+    Everything I've built — professional, freelance and personal. Each project links back to the
+    company or role it belongs to.
+  </p>
+
+  <!-- Jump links -->
+  <div class="flex flex-wrap gap-2 mb-10">
+    {jumpGroups.map(g => (
+      <a href={`#${g.id}`} class="btn-outline text-xs px-3 py-1.5">{g.label}</a>
+    ))}
+  </div>
+
+  <!-- Project cards — flat list, newest first -->
+  <div class="space-y-6">
+    {projects.map(project => (
+      <details id={project.id} class="group card scroll-mt-20 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex flex-col gap-2 cursor-pointer list-none">
+          <!-- Header row -->
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
+            <h2 class="text-lg font-semibold text-gray-900 group-open:text-indigo-600 transition-colors">
+              {project.emoji} {project.title}
+            </h2>
+            <div class="flex items-center gap-3">
+              <span class="text-sm text-indigo-600 font-medium whitespace-nowrap">{project.period}</span>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="h-5 w-5 text-gray-400 group-open:rotate-180 transition-transform" 
+                viewBox="0 0 20 20" 
+                fill="currentColor"
+              >
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Company tag -->
+          <div class="flex items-center gap-2">
+            {project.companyId !== 'side' ? (
+              <span class="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700">
+                {project.company}
+              </span>
+            ) : (
+              <span class="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">
+                🧪 Side Project
+              </span>
+            )}
+            <span class="text-xs text-gray-400 font-normal">Click to expand description</span>
+          </div>
+        </summary>
+
+        <div class="mt-4 pt-4 border-t border-gray-100">
+          <!-- Description -->
+          <p class="text-sm text-gray-700 leading-relaxed mb-4">{project.description}</p>
+
+          <!-- Links -->
+          {project.links && project.links.length > 0 && (
+            <div class="flex flex-wrap gap-2">
+              {project.links.map(link => (
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class={link.type === 'primary' ? 'btn-primary text-xs px-3 py-1.5' : 'btn-outline text-xs px-3 py-1.5'}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          )}
+          
+          {project.companyId !== 'side' && (
+            <div class="mt-4">
+              <a
+                href={`/experience#${project.companyId}`}
+                class="text-xs text-indigo-500 hover:text-indigo-700 font-medium flex items-center gap-1"
+              >
+                View in Experience ↗
+              </a>
+            </div>
+          )}
+        </div>
+      </details>
+    ))}
+  </div>
+</BaseLayout>

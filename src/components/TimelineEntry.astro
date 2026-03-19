@@ -2,11 +2,12 @@
 interface Props {
   title: string;
   subtitle: string;
+  subtitleUrl?: string;
   period: string;
   description?: string;
 }
 
-const { title, subtitle, period, description } = Astro.props;
+const { title, subtitle, subtitleUrl, period, description } = Astro.props;
 ---
 
 <div class="relative pl-10 pb-8">
@@ -20,7 +21,13 @@ const { title, subtitle, period, description } = Astro.props;
       <h3 class="text-lg font-semibold text-gray-900">{title}</h3>
       <span class="text-sm text-indigo-600 font-medium whitespace-nowrap">{period}</span>
     </div>
-    <p class="text-sm font-medium text-gray-500 mb-3">{subtitle}</p>
+    {subtitleUrl ? (
+      <p class="text-sm font-medium text-gray-500 mb-3">
+        <a href={subtitleUrl} target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors">{subtitle}</a>
+      </p>
+    ) : (
+      <p class="text-sm font-medium text-gray-500 mb-3">{subtitle}</p>
+    )}
     {description && (
       <p class="text-sm text-gray-700 leading-relaxed">{description}</p>
     )}

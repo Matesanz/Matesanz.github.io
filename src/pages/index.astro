@@ -1,11 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SkillBadges from '../components/SkillBadges.astro';
 ---
 
 <BaseLayout
-  title="Andrés Matesanz — AI & Python Developer"
-  description="Python R&D Software Developer specializing in AI, Data and Computer Vision. Co-founder of the Malaga AI Association."
+  title="Andrés Matesanz — AI & Automation Engineer"
+  description="AI & Automation Engineer with a product-first mindset. I solve real problems with the simplest technology that works — and use AI only when it genuinely fits."
 >
   <!-- Hero Section -->
   <section class="py-12 text-center">
@@ -22,8 +21,8 @@ import SkillBadges from '../components/SkillBadges.astro';
         <h1 class="text-4xl font-bold text-gray-900 mb-2">
           👋 Hi, I'm Andrés Matesanz
         </h1>
-        <p class="text-xl text-indigo-600 font-medium">Python R&D Software Developer</p>
-        <p class="text-gray-500 mt-1">AI · Data · Computer Vision · Robotics</p>
+        <p class="text-xl text-indigo-600 font-medium">AI & Automation Engineer</p>
+        <p class="text-gray-500 mt-1">Computer Vision · Automation · Low-Code · MLOps</p>
       </div>
 
       <!-- Social buttons -->
@@ -61,6 +60,17 @@ import SkillBadges from '../components/SkillBadges.astro';
           </svg>
           Twitter
         </a>
+        <a
+          href="https://medium.com/@matesanz.cuadrado"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-outline"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M13.54 12a6.8 6.8 0 11-6.77-6.82A6.77 6.77 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42S14.2 15.54 14.2 12s1.51-6.42 3.38-6.42 3.38 2.88 3.38 6.42zm3.04 0c0 3.25-.31 5.88-.7 5.88s-.7-2.63-.7-5.88.31-5.88.7-5.88.7 2.63.7 5.88z" />
+          </svg>
+          Medium
+        </a>
       </div>
     </div>
   </section>
@@ -69,15 +79,23 @@ import SkillBadges from '../components/SkillBadges.astro';
   <section class="py-6">
     <div class="card">
       <p class="text-gray-700 leading-relaxed text-lg">
-        I'm a <strong>Python R&D Software Developer</strong> who takes new ideas into practice — and I really enjoy it! 😁
-        I give talks about <strong>Artificial Intelligence</strong> and I'm deeply interested in <strong>AI, Data and Robotics</strong> 🦾.
-        I also like board games, doing sports, playing guitar, and just being with my friends.
+        I'm an <strong>AI & Automation Engineer</strong> with a product-first mindset. My job is to
+        understand the problem my users or stakeholders are actually facing — then apply
+        <strong>the simplest technology that solves it</strong>. Not the most impressive one.
+        Sometimes that's a three-node automation workflow. Sometimes it's a custom-trained
+        computer vision model. The tool follows the problem, never the other way around.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mt-4">
+        Yes, you'll see <strong>AI all over this site</strong> — because it genuinely fits many of
+        the problems I work on. But I reach for it only when it does. I care far more about
+        <strong>shipping working solutions</strong> that create real value than chasing the latest
+        model release. Pragmatism over hype, always.
       </p>
     </div>
   </section>
 
   <!-- Quick nav cards -->
-  <section class="py-6 grid sm:grid-cols-3 gap-4">
+  <section class="py-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
     <a href="/education" class="card hover:border-indigo-300 hover:shadow-md transition-all group">
       <div class="text-2xl mb-2">🎓</div>
       <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Education</h3>
@@ -88,77 +106,25 @@ import SkillBadges from '../components/SkillBadges.astro';
       <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Experience</h3>
       <p class="text-sm text-gray-500 mt-1">Professional career</p>
     </a>
+    <a href="/projects" class="card hover:border-indigo-300 hover:shadow-md transition-all group">
+      <div class="text-2xl mb-2">📂</div>
+      <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Projects</h3>
+      <p class="text-sm text-gray-500 mt-1">What I've built</p>
+    </a>
     <a href="/talks" class="card hover:border-indigo-300 hover:shadow-md transition-all group">
       <div class="text-2xl mb-2">🗣️</div>
       <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Talks</h3>
       <p class="text-sm text-gray-500 mt-1">Conferences & workshops</p>
     </a>
-  </section>
-
-  <!-- Skills -->
-  <SkillBadges />
-
-  <!-- What I like -->
-  <section class="py-8">
-    <h2 class="section-title">🙂 What do I like?</h2>
-    <div class="card">
-      <ul class="space-y-3 text-gray-700">
-        <li class="flex items-start gap-3">
-          <span class="text-xl">🐍</span>
-          <span>I'm good at <strong>Python</strong> — it's my preferred programming language.</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-xl">🐋</span>
-          <span>I like using <strong>Docker</strong> from personal projects to production.</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-xl">🦾</span>
-          <span>I love to investigate about <strong>AI</strong> and <strong>Data</strong>.</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-xl">👷</span>
-          <span>I like to automate development processes (<strong>CI/CD</strong>).</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-xl">🧠</span>
-          <span>
-            I'm co-founder of the{' '}
-            <a href="https://twitter.com/aimalaga" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline font-medium">
-              Malaga Association of Artificial Intelligence
-            </a>.
-          </span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Find me -->
-  <section class="py-8">
-    <h2 class="section-title">🔍 Where can you find me?</h2>
-    <div class="card">
-      <ul class="space-y-3 text-gray-700">
-        <li class="flex items-center gap-3">
-          <span class="text-xl">🐦</span>
-          <span>
-            <strong>Twitter</strong>:{' '}
-            <a href="https://twitter.com/aimatesanz" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">@AIMatesanz</a>
-          </span>
-        </li>
-        <li class="flex items-center gap-3">
-          <span class="text-xl">💻</span>
-          <span>
-            <strong>GitHub</strong>:{' '}
-            <a href="https://github.com/Matesanz" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">@Matesanz</a>
-          </span>
-        </li>
-        <li class="flex items-center gap-3">
-          <span class="text-xl">💼</span>
-          <span>
-            <strong>LinkedIn</strong>:{' '}
-            <a href="https://www.linkedin.com/in/aimatesanz/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">@Matesanz</a>
-          </span>
-        </li>
-      </ul>
-    </div>
+    <a href="/technologies" class="card hover:border-indigo-300 hover:shadow-md transition-all group">
+      <div class="text-2xl mb-2">🔧</div>
+      <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">Technologies</h3>
+      <p class="text-sm text-gray-500 mt-1">My technical stack</p>
+    </a>
+    <a href="/cv" class="card hover:border-indigo-300 hover:shadow-md transition-all group">
+      <div class="text-2xl mb-2">📄</div>
+      <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">CV</h3>
+      <p class="text-sm text-gray-500 mt-1">Recruiter-friendly summary</p>
+    </a>
   </section>
 </BaseLayout>

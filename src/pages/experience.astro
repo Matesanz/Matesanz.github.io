@@ -1,11 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TimelineEntry from '../components/TimelineEntry.astro';
+import { getProjectsByCompany } from '../data/projects';
+
+const labsterProjects   = getProjectsByCompany('labster');
+const codespaceProjects = getProjectsByCompany('codespace');
+const sngularProjects   = getProjectsByCompany('sngular');
+const aeorumProjects    = getProjectsByCompany('aeorum');
+const umaProjects       = getProjectsByCompany('uma');
+const monkeatProjects   = getProjectsByCompany('monkeat');
+const freelanceProjects = getProjectsByCompany('freelance');
 ---
 
 <BaseLayout
   title="Experience — Andrés Matesanz"
-  description="Professional experience of Andrés Matesanz: R&D Developer in AI, Computer Vision and Data Engineering."
+  description="Professional experience of Andrés Matesanz: AI Engineer, Computer Vision Developer, and Bootcamp Instructor."
 >
   <h1 class="text-3xl font-bold text-gray-900 mb-2">🧑‍💻 Professional Experience</h1>
   <p class="text-gray-500 mb-10">
@@ -14,97 +23,180 @@ import TimelineEntry from '../components/TimelineEntry.astro';
 
   <!-- Jump links -->
   <div class="flex flex-wrap gap-2 mb-10">
-    <a href="#aeorum" class="btn-outline text-xs px-3 py-1.5">🧑‍🔬 Aeorum</a>
-    <a href="#uma" class="btn-outline text-xs px-3 py-1.5">🧑‍🔬 Univ. Malaga</a>
-    <a href="#monkeat" class="btn-outline text-xs px-3 py-1.5">🕵️ Monkeat</a>
+    <a href="#labster"   class="btn-outline text-xs px-3 py-1.5">📅 2026</a>
+    <a href="#freelance" class="btn-outline text-xs px-3 py-1.5">📅 2025</a>
+    <a href="#codespace" class="btn-outline text-xs px-3 py-1.5">📅 2023</a>
+    <a href="#sngular"   class="btn-outline text-xs px-3 py-1.5">📅 2022</a>
+    <a href="#aeorum"    class="btn-outline text-xs px-3 py-1.5">📅 2020-22</a>
+    <a href="#monkeat"   class="btn-outline text-xs px-3 py-1.5">📅 2019</a>
+    <a href="#uma"       class="btn-outline text-xs px-3 py-1.5">📅 2018</a>
   </div>
 
   <div class="relative">
 
-    <!-- Aeorum -->
-    <div id="aeorum">
+    <!-- Labster -->
+    <div id="labster">
       <TimelineEntry
-        title="R+D Developer: Data, AI and Computer Vision"
-        subtitle="Aeorum"
-        period="Aug 2020 – Present"
+        title="AI Engineer"
+        subtitle="Labster"
+        subtitleUrl="https://www.labster.com/"
+        period="Apr 2025 – Present"
       >
-        <p class="text-sm text-gray-700 leading-relaxed mb-4">
-          Developing solutions across multiple R&D fields using deep learning, data engineering, and computer vision.
+        <p class="text-sm text-gray-700 leading-relaxed mb-5">
+          Designing and shipping <strong>AI-powered automation</strong> to radically accelerate
+          internal product workflows — cutting production costs while preserving quality at scale.
         </p>
-        <div class="space-y-3">
+        {labsterProjects.length > 0 && (
           <div>
-            <h4 class="text-sm font-semibold text-gray-800 mb-1">🤖 Deep Learning</h4>
-            <p class="text-sm text-gray-600">
-              Implementing perception in unmanned aerial vehicles using <strong>deep neural networks</strong> (YOLO, SSD-MobileNet)
-              and classic computer vision. Training and deploying models on GPU and embedded systems with <strong>C++</strong>,
-              <strong>Docker</strong>, <strong>Python</strong> and <strong>ROS</strong>.
-            </p>
+            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Projects</h4>
+            <div class="space-y-2">
+              {labsterProjects.map(p => (
+                <a href={`/projects#${p.id}`} class="flex items-start justify-between gap-3 p-3 rounded-lg border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 transition-colors group">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-gray-800 group-hover:text-indigo-700 transition-colors">
+                      {p.emoji} {p.title}
+                    </p>
+                    <p class="text-xs text-gray-500 mt-0.5 line-clamp-1">{p.description.slice(0, 100)}…</p>
+                  </div>
+                  <span class="text-xs text-indigo-500 whitespace-nowrap mt-0.5 flex-shrink-0">View →</span>
+                </a>
+              ))}
+            </div>
           </div>
-          <div>
-            <h4 class="text-sm font-semibold text-gray-800 mb-1">📊 Data Engineering</h4>
-            <p class="text-sm text-gray-600">
-              Built the company's data layer from scratch: big data processing with <strong>Spark</strong>, real-time processing
-              with <strong>Kafka</strong>, and database design with <strong>MongoDB</strong>, <strong>MySQL</strong> and <strong>Redis</strong>.
-            </p>
-          </div>
-          <div>
-            <h4 class="text-sm font-semibold text-gray-800 mb-1">🏗️ Structure from Motion</h4>
-            <p class="text-sm text-gray-600">
-              Building 3D point cloud reconstructions from 2D drone images.
-            </p>
-          </div>
-          <div>
-            <h4 class="text-sm font-semibold text-gray-800 mb-1">🌱 Plant Health Analysis</h4>
-            <p class="text-sm text-gray-600">
-              Research project using special cameras to retrieve field health status — building wavelength orthomosaics
-              for agronomists.
-            </p>
-          </div>
-          <div>
-            <h4 class="text-sm font-semibold text-gray-800 mb-1">☀️ Photovoltaic Panels Analysis</h4>
-            <p class="text-sm text-gray-600">
-              Research project detecting anomalous thermal registries on photovoltaic cells using infrared cameras.
-            </p>
-          </div>
-        </div>
+        )}
       </TimelineEntry>
     </div>
 
-    <!-- University of Malaga -->
-    <div id="uma">
+    <!-- Freelance -->
+    <div id="freelance">
       <TimelineEntry
-        title="R+D Developer: AI and Computer Vision"
-        subtitle="University of Malaga — Smart-Campus Projects"
-        period="Dec 2018 – Mar 2020"
+        title="Freelance AI & Deep Learning"
+        subtitle="Independent"
+        period="Mar – Jun 2025"
       >
-        <p class="text-sm text-gray-700 leading-relaxed mb-4">
-          Part of the Smart-Campus I projects (<a href="https://github.com/Matesanz/DIAS2P" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">DIAS2P</a> and{' '}
-          <a href="https://github.com/Matesanz/StreetQR" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">StreetQR</a>):
-          built a solution to reduce car-pedestrian collisions by attaching embedded systems running object detection
-          neural networks into traffic signs. The{' '}
-          <a href="https://riuma.uma.es/xmlui/bitstream/handle/10630/18443/CIPI_2019_paper_37.pdf" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">paper was published at CIPI 2019</a>.
+        <p class="text-sm text-gray-700 leading-relaxed mb-5">
+          Independent R&D and consulting — applying <strong>cutting-edge AI research</strong> to
+          solve specific client problems on a project basis.
         </p>
-        <div class="space-y-3">
+        {freelanceProjects.length > 0 && (
           <div>
-            <h4 class="text-sm font-semibold text-gray-800 mb-1">🤖 Deep Learning</h4>
-            <p class="text-sm text-gray-600">
-              Training YOLO, SSD-MobileNet and Mask-RCNN for real-time pedestrian-collision detection.
-              Deployment on <strong>Jetson Nano</strong>. Object tracking with the Hungarian Algorithm.
-            </p>
+            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Projects</h4>
+            <div class="space-y-2">
+              {freelanceProjects.map(p => (
+                <a href={`/projects#${p.id}`} class="flex items-start justify-between gap-3 p-3 rounded-lg border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 transition-colors group">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-gray-800 group-hover:text-indigo-700 transition-colors">
+                      {p.emoji} {p.title}
+                    </p>
+                    <p class="text-xs text-gray-500 mt-0.5 line-clamp-1">{p.description.slice(0, 100)}…</p>
+                  </div>
+                  <span class="text-xs text-indigo-500 whitespace-nowrap mt-0.5 flex-shrink-0">View →</span>
+                </a>
+              ))}
+            </div>
           </div>
+        )}
+      </TimelineEntry>
+    </div>
+
+    <!-- Codespace Academy -->
+    <div id="codespace">
+      <TimelineEntry
+        title="Bootcamp Instructor"
+        subtitle="Codespace Academy"
+        subtitleUrl="https://codespaceacademy.com/"
+        period="May 2023 – Dec 2023"
+      >
+        <p class="text-sm text-gray-700 leading-relaxed mb-5">
+          Full <strong>curriculum design and delivery</strong> for Machine Learning bootcamps —
+          taking students from fundamentals to production-ready skills across AI, MLOps, and software engineering.
+        </p>
+        {codespaceProjects.length > 0 && (
           <div>
-            <h4 class="text-sm font-semibold text-gray-800 mb-1">⚡ Electronics</h4>
-            <p class="text-sm text-gray-600">
-              Designing electronic architecture to run actuators (sound and lights) warning drivers of pedestrian presence.
-            </p>
+            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Projects</h4>
+            <div class="space-y-2">
+              {codespaceProjects.map(p => (
+                <a href={`/projects#${p.id}`} class="flex items-start justify-between gap-3 p-3 rounded-lg border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 transition-colors group">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-gray-800 group-hover:text-indigo-700 transition-colors">
+                      {p.emoji} {p.title}
+                    </p>
+                    <p class="text-xs text-gray-500 mt-0.5 line-clamp-1">{p.description.slice(0, 100)}…</p>
+                  </div>
+                  <span class="text-xs text-indigo-500 whitespace-nowrap mt-0.5 flex-shrink-0">View →</span>
+                </a>
+              ))}
+            </div>
           </div>
+        )}
+      </TimelineEntry>
+    </div>
+
+    <!-- SNGULAR -->
+    <div id="sngular">
+      <TimelineEntry
+        title="Artificial Intelligence Engineer"
+        subtitle="SNGULAR"
+        subtitleUrl="https://www.sngular.com/"
+        period="Mar 2022 – Apr 2025"
+      >
+        <p class="text-sm text-gray-700 leading-relaxed mb-5">
+          Launched <strong>AI products from zero to demo</strong> across multiple industries.
+          Owned the full lifecycle — research, prototyping, model development, and delivery —
+          consistently shipping under tight deadlines and ambiguous requirements.
+        </p>
+        {sngularProjects.length > 0 && (
           <div>
-            <h4 class="text-sm font-semibold text-gray-800 mb-1">📊 Data</h4>
-            <p class="text-sm text-gray-600">
-              Built an API using <strong>Firebase</strong> to record statistics on car and pedestrian crossings.
-            </p>
+            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Projects</h4>
+            <div class="space-y-2">
+              {sngularProjects.map(p => (
+                <a href={`/projects#${p.id}`} class="flex items-start justify-between gap-3 p-3 rounded-lg border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 transition-colors group">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-gray-800 group-hover:text-indigo-700 transition-colors">
+                      {p.emoji} {p.title}
+                    </p>
+                    <p class="text-xs text-gray-500 mt-0.5 line-clamp-1">{p.description.slice(0, 100)}…</p>
+                  </div>
+                  <span class="text-xs text-indigo-500 whitespace-nowrap mt-0.5 flex-shrink-0">View →</span>
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
+      </TimelineEntry>
+    </div>
+
+    <!-- Aeorum -->
+    <div id="aeorum">
+      <TimelineEntry
+        title="Computer Vision Developer"
+        subtitle="Aeorum"
+        subtitleUrl="https://aeorum.com/?lang=es"
+        period="Sept 2020 – Mar 2022"
+      >
+        <p class="text-sm text-gray-700 leading-relaxed mb-5">
+          Built and deployed <strong>computer vision systems on embedded hardware</strong> for
+          real-world field operations — bridging R&D with production-grade solutions in
+          challenging environments.
+        </p>
+        {aeorumProjects.length > 0 && (
+          <div>
+            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Projects</h4>
+            <div class="space-y-2">
+              {aeorumProjects.map(p => (
+                <a href={`/projects#${p.id}`} class="flex items-start justify-between gap-3 p-3 rounded-lg border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 transition-colors group">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-gray-800 group-hover:text-indigo-700 transition-colors">
+                      {p.emoji} {p.title}
+                    </p>
+                    <p class="text-xs text-gray-500 mt-0.5 line-clamp-1">{p.description.slice(0, 100)}…</p>
+                  </div>
+                  <span class="text-xs text-indigo-500 whitespace-nowrap mt-0.5 flex-shrink-0">View →</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </TimelineEntry>
     </div>
 
@@ -115,14 +207,66 @@ import TimelineEntry from '../components/TimelineEntry.astro';
         subtitle="Monkeat — Startup (Demium Incubation Program)"
         period="Mar 2019 – Oct 2019"
       >
-        <p class="text-sm text-gray-700 leading-relaxed">
-          Co-founded <strong>Monkeat</strong>, a live-time marketplace helping pubs boost customer acquisition through
-          real-time offers. As CTO, developed a full <strong>Progressive Web App</strong> using <strong>Vue + Ionic</strong>,
-          <strong>MongoDB</strong>, <strong>Flask</strong> and <strong>Firebase</strong>. We could not finally validate our
-          MVP and closed the project after a few months — but it was a great learning experience!
+        <p class="text-sm text-gray-700 leading-relaxed mb-5">
+          Co-founded a startup and <strong>shipped the product end-to-end as CTO</strong> —
+          from architecture and development to launch. A formative experience in product
+          ownership, speed of execution, and knowing when to pivot.
         </p>
+        {monkeatProjects.length > 0 && (
+          <div>
+            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Projects</h4>
+            <div class="space-y-2">
+              {monkeatProjects.map(p => (
+                <a href={`/projects#${p.id}`} class="flex items-start justify-between gap-3 p-3 rounded-lg border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 transition-colors group">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-gray-800 group-hover:text-indigo-700 transition-colors">
+                      {p.emoji} {p.title}
+                    </p>
+                    <p class="text-xs text-gray-500 mt-0.5 line-clamp-1">{p.description.slice(0, 100)}…</p>
+                  </div>
+                  <span class="text-xs text-indigo-500 whitespace-nowrap mt-0.5 flex-shrink-0">View →</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </TimelineEntry>
+    </div>
+
+    <!-- University of Malaga -->
+    <div id="uma">
+      <TimelineEntry
+        title="R+D Developer: AI and Computer Vision"
+        subtitle="University of Malaga — Smart-Campus Projects"
+        subtitleUrl="https://www.uma.es/"
+        period="Dec 2018 – Mar 2020"
+      >
+        <p class="text-sm text-gray-700 leading-relaxed mb-5">
+          Applied <strong>research to real-world impact</strong> — designed and built AI prototypes
+          that went from academic concept to working field deployment, with results published
+          at an international conference.
+        </p>
+        {umaProjects.length > 0 && (
+          <div>
+            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Projects</h4>
+            <div class="space-y-2">
+              {umaProjects.map(p => (
+                <a href={`/projects#${p.id}`} class="flex items-start justify-between gap-3 p-3 rounded-lg border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 transition-colors group">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-gray-800 group-hover:text-indigo-700 transition-colors">
+                      {p.emoji} {p.title}
+                    </p>
+                    <p class="text-xs text-gray-500 mt-0.5 line-clamp-1">{p.description.slice(0, 100)}…</p>
+                  </div>
+                  <span class="text-xs text-indigo-500 whitespace-nowrap mt-0.5 flex-shrink-0">View →</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </TimelineEntry>
     </div>
 
   </div>
+
 </BaseLayout>

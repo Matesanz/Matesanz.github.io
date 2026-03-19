@@ -16,6 +16,21 @@ const { title, description } = Astro.props;
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
+    <!-- Google tag (gtag.js) -->
+    <script is:inline define:vars={{ gaId: import.meta.env.PUBLIC_GA_ID }}>
+      const consent = localStorage.getItem('cookie-consent');
+      if (consent === 'accepted' && gaId) {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', gaId, { 'anonymize_ip': true });
+      }
+    </script>
   </head>
   <body class="min-h-screen flex flex-col">
     <Nav />
@@ -23,5 +38,47 @@ const { title, description } = Astro.props;
       <slot />
     </main>
     <Footer />
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-[100] transform translate-y-full transition-transform duration-300 print:hidden">
+      <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <p class="text-sm">
+          I use basic analytics to understand how this site is used. By clicking "Accept", you agree to the use of cookies for these purposes.
+        </p>
+        <div class="flex gap-4">
+          <button id="decline-cookies" class="text-sm text-gray-400 hover:text-white transition-colors">Decline</button>
+          <button id="accept-cookies" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-all">Accept</button>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline>
+      const banner = document.getElementById('cookie-banner');
+      const acceptBtn = document.getElementById('accept-cookies');
+      const declineBtn = document.getElementById('decline-cookies');
+
+      function showBanner() {
+        banner.classList.remove('translate-y-full');
+      }
+
+      function hideBanner() {
+        banner.classList.add('translate-y-full');
+      }
+
+      function setConsent(consented) {
+        localStorage.setItem('cookie-consent', consented ? 'accepted' : 'declined');
+        hideBanner();
+        if (consented) {
+          window.location.reload(); // Reload to enable GA
+        }
+      }
+
+      if (!localStorage.getItem('cookie-consent')) {
+        setTimeout(showBanner, 1000);
+      }
+
+      acceptBtn?.addEventListener('click', () => setConsent(true));
+      declineBtn?.addEventListener('click', () => setConsent(false));
+    </script>
   </body>
 </html>
