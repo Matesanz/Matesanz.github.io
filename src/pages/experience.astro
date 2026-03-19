@@ -23,12 +23,13 @@ const freelanceProjects = getProjectsByCompany('freelance');
 
   <!-- Jump links -->
   <div class="flex flex-wrap gap-2 mb-10">
-    <a href="#labster"   class="btn-outline text-xs px-3 py-1.5">🧪 Labster</a>
-    <a href="#codespace" class="btn-outline text-xs px-3 py-1.5">🎓 Codespace Academy</a>
-    <a href="#sngular"   class="btn-outline text-xs px-3 py-1.5">🤖 SNGULAR</a>
-    <a href="#aeorum"    class="btn-outline text-xs px-3 py-1.5">🚁 Aeorum</a>
-    <a href="#uma"       class="btn-outline text-xs px-3 py-1.5">🧑‍🔬 Univ. Malaga</a>
-    <a href="#monkeat"   class="btn-outline text-xs px-3 py-1.5">🕵️ Monkeat</a>
+    <a href="#labster"   class="btn-outline text-xs px-3 py-1.5">📅 2026</a>
+    <a href="#freelance" class="btn-outline text-xs px-3 py-1.5">📅 2025</a>
+    <a href="#codespace" class="btn-outline text-xs px-3 py-1.5">📅 2023</a>
+    <a href="#sngular"   class="btn-outline text-xs px-3 py-1.5">📅 2022</a>
+    <a href="#aeorum"    class="btn-outline text-xs px-3 py-1.5">📅 2020-22</a>
+    <a href="#monkeat"   class="btn-outline text-xs px-3 py-1.5">📅 2019</a>
+    <a href="#uma"       class="btn-outline text-xs px-3 py-1.5">📅 2018</a>
   </div>
 
   <div class="relative">
@@ -38,13 +39,12 @@ const freelanceProjects = getProjectsByCompany('freelance');
       <TimelineEntry
         title="AI Engineer"
         subtitle="Labster"
+        subtitleUrl="https://www.labster.com/"
         period="Apr 2025 – Present"
       >
         <p class="text-sm text-gray-700 leading-relaxed mb-5">
-          At Labster, our product is <strong>VR/3D interactive science simulations</strong> for
-          universities and high schools — immersive and high-quality, but expensive to produce.
-          My mission is to change that ratio without touching the quality, using AI automation
-          and low-code tooling.
+          Designing and shipping <strong>AI-powered automation</strong> to radically accelerate
+          internal product workflows — cutting production costs while preserving quality at scale.
         </p>
         {labsterProjects.length > 0 && (
           <div>
@@ -67,17 +67,49 @@ const freelanceProjects = getProjectsByCompany('freelance');
       </TimelineEntry>
     </div>
 
+    <!-- Freelance -->
+    <div id="freelance">
+      <TimelineEntry
+        title="Freelance AI & Deep Learning"
+        subtitle="Independent"
+        period="Mar – Jun 2025"
+      >
+        <p class="text-sm text-gray-700 leading-relaxed mb-5">
+          Independent R&D and consulting — applying <strong>cutting-edge AI research</strong> to
+          solve specific client problems on a project basis.
+        </p>
+        {freelanceProjects.length > 0 && (
+          <div>
+            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Projects</h4>
+            <div class="space-y-2">
+              {freelanceProjects.map(p => (
+                <a href={`/projects#${p.id}`} class="flex items-start justify-between gap-3 p-3 rounded-lg border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 transition-colors group">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-gray-800 group-hover:text-indigo-700 transition-colors">
+                      {p.emoji} {p.title}
+                    </p>
+                    <p class="text-xs text-gray-500 mt-0.5 line-clamp-1">{p.description.slice(0, 100)}…</p>
+                  </div>
+                  <span class="text-xs text-indigo-500 whitespace-nowrap mt-0.5 flex-shrink-0">View →</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </TimelineEntry>
+    </div>
+
     <!-- Codespace Academy -->
     <div id="codespace">
       <TimelineEntry
         title="Bootcamp Instructor"
         subtitle="Codespace Academy"
-        period="May 2023 – Present"
+        subtitleUrl="https://codespaceacademy.com/"
+        period="May 2023 – Dec 2023"
       >
         <p class="text-sm text-gray-700 leading-relaxed mb-5">
-          Teaching the next generation of ML engineers everything I know about
-          <strong>Machine Learning</strong>, <strong>Python</strong> and <strong>MLOps</strong>.
-          Full curriculum design and delivery for bootcamp cohorts.
+          Full <strong>curriculum design and delivery</strong> for Machine Learning bootcamps —
+          taking students from fundamentals to production-ready skills across AI, MLOps, and software engineering.
         </p>
         {codespaceProjects.length > 0 && (
           <div>
@@ -105,12 +137,13 @@ const freelanceProjects = getProjectsByCompany('freelance');
       <TimelineEntry
         title="Artificial Intelligence Engineer"
         subtitle="SNGULAR"
+        subtitleUrl="https://www.sngular.com/"
         period="Mar 2022 – Apr 2025"
       >
         <p class="text-sm text-gray-700 leading-relaxed mb-5">
-          Worked across multiple high-impact AI products in different industries — from retail
-          and sports to real estate and banking. Each project had a clear product goal and a
-          tight delivery timeline.
+          Launched <strong>AI products from zero to demo</strong> across multiple industries.
+          Owned the full lifecycle — research, prototyping, model development, and delivery —
+          consistently shipping under tight deadlines and ambiguous requirements.
         </p>
         {sngularProjects.length > 0 && (
           <div>
@@ -138,50 +171,19 @@ const freelanceProjects = getProjectsByCompany('freelance');
       <TimelineEntry
         title="Computer Vision Developer"
         subtitle="Aeorum"
+        subtitleUrl="https://aeorum.com/?lang=es"
         period="Sept 2020 – Mar 2022"
       >
         <p class="text-sm text-gray-700 leading-relaxed mb-5">
-          Drone-based computer vision for agriculture and renewable energy. Built recognition
-          and evaluation systems for agricultural fields and solar panel farms using
-          <strong>ROS</strong> and <strong>Python</strong>.
+          Built and deployed <strong>computer vision systems on embedded hardware</strong> for
+          real-world field operations — bridging R&D with production-grade solutions in
+          challenging environments.
         </p>
         {aeorumProjects.length > 0 && (
           <div>
             <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Projects</h4>
             <div class="space-y-2">
               {aeorumProjects.map(p => (
-                <a href={`/projects#${p.id}`} class="flex items-start justify-between gap-3 p-3 rounded-lg border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 transition-colors group">
-                  <div class="min-w-0">
-                    <p class="text-sm font-medium text-gray-800 group-hover:text-indigo-700 transition-colors">
-                      {p.emoji} {p.title}
-                    </p>
-                    <p class="text-xs text-gray-500 mt-0.5 line-clamp-1">{p.description.slice(0, 100)}…</p>
-                  </div>
-                  <span class="text-xs text-indigo-500 whitespace-nowrap mt-0.5 flex-shrink-0">View →</span>
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
-      </TimelineEntry>
-    </div>
-
-    <!-- University of Malaga -->
-    <div id="uma">
-      <TimelineEntry
-        title="R+D Developer: AI and Computer Vision"
-        subtitle="University of Malaga — Smart-Campus Projects"
-        period="Dec 2018 – Mar 2020"
-      >
-        <p class="text-sm text-gray-700 leading-relaxed mb-5">
-          Part of the Smart-Campus I R&D program — building embedded AI systems to solve
-          real urban safety problems, with research published at an international conference.
-        </p>
-        {umaProjects.length > 0 && (
-          <div>
-            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Projects</h4>
-            <div class="space-y-2">
-              {umaProjects.map(p => (
                 <a href={`/projects#${p.id}`} class="flex items-start justify-between gap-3 p-3 rounded-lg border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 transition-colors group">
                   <div class="min-w-0">
                     <p class="text-sm font-medium text-gray-800 group-hover:text-indigo-700 transition-colors">
@@ -206,9 +208,9 @@ const freelanceProjects = getProjectsByCompany('freelance');
         period="Mar 2019 – Oct 2019"
       >
         <p class="text-sm text-gray-700 leading-relaxed mb-5">
-          Co-founded a live marketplace startup inside the Demium incubation program,
-          acting as CTO. A great lesson in product thinking, full-stack development, and
-          knowing when to pivot.
+          Co-founded a startup and <strong>shipped the product end-to-end as CTO</strong> —
+          from architecture and development to launch. A formative experience in product
+          ownership, speed of execution, and knowing when to pivot.
         </p>
         {monkeatProjects.length > 0 && (
           <div>
@@ -231,37 +233,40 @@ const freelanceProjects = getProjectsByCompany('freelance');
       </TimelineEntry>
     </div>
 
-  </div>
-
-  <!-- Freelance Section -->
-  <div class="mt-12" id="freelance">
-    <TimelineEntry
-      title="Freelance"
-      subtitle="Independent"
-      period="Mar – Jun 2025"
-    >
-      <p class="text-sm text-gray-700 leading-relaxed mb-5">
-        Independent projects taken on outside of full-time employment.
-      </p>
-      {freelanceProjects.length > 0 && (
-        <div>
-          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Projects</h4>
-          <div class="space-y-2">
-            {freelanceProjects.map(p => (
-              <a href={`/projects#${p.id}`} class="flex items-start justify-between gap-3 p-3 rounded-lg border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 transition-colors group">
-                <div class="min-w-0">
-                  <p class="text-sm font-medium text-gray-800 group-hover:text-indigo-700 transition-colors">
-                    {p.emoji} {p.title}
-                  </p>
-                  <p class="text-xs text-gray-500 mt-0.5 line-clamp-1">{p.description.slice(0, 100)}…</p>
-                </div>
-                <span class="text-xs text-indigo-500 whitespace-nowrap mt-0.5 flex-shrink-0">View →</span>
-              </a>
-            ))}
+    <!-- University of Malaga -->
+    <div id="uma">
+      <TimelineEntry
+        title="R+D Developer: AI and Computer Vision"
+        subtitle="University of Malaga — Smart-Campus Projects"
+        subtitleUrl="https://www.uma.es/"
+        period="Dec 2018 – Mar 2020"
+      >
+        <p class="text-sm text-gray-700 leading-relaxed mb-5">
+          Applied <strong>research to real-world impact</strong> — designed and built AI prototypes
+          that went from academic concept to working field deployment, with results published
+          at an international conference.
+        </p>
+        {umaProjects.length > 0 && (
+          <div>
+            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Projects</h4>
+            <div class="space-y-2">
+              {umaProjects.map(p => (
+                <a href={`/projects#${p.id}`} class="flex items-start justify-between gap-3 p-3 rounded-lg border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 transition-colors group">
+                  <div class="min-w-0">
+                    <p class="text-sm font-medium text-gray-800 group-hover:text-indigo-700 transition-colors">
+                      {p.emoji} {p.title}
+                    </p>
+                    <p class="text-xs text-gray-500 mt-0.5 line-clamp-1">{p.description.slice(0, 100)}…</p>
+                  </div>
+                  <span class="text-xs text-indigo-500 whitespace-nowrap mt-0.5 flex-shrink-0">View →</span>
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
-    </TimelineEntry>
+        )}
+      </TimelineEntry>
+    </div>
+
   </div>
 
 </BaseLayout>

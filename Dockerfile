@@ -14,6 +14,16 @@ RUN npm run build
 # ── Stage 2: serve ───────────────────────────────────────────────────────────
 FROM nginx:alpine AS server
 
+# Add custom nginx config to handle directories without trailing slashes
+RUN echo 'server { \
+    listen 80; \
+    location / { \
+        root /usr/share/nginx/html; \
+        index index.html index.htm; \
+        try_files $uri $uri/ $uri.html =404; \
+    } \
+}' > /etc/nginx/conf.d/default.conf
+
 # Copy built static files into nginx's default serve directory
 COPY --from=builder /app/dist /usr/share/nginx/html
 

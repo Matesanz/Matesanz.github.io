@@ -19,11 +19,26 @@ export interface Project {
 
 /**
  * Single source of truth for all projects.
- * Ordered newest first.
+ * Ordered newest first by START date.
  * Both /projects and /experience import from here — do not duplicate content elsewhere.
  */
 export const projects: Project[] = [
-  // ── Labster ──────────────────────────────────────────────────────────────
+  // ── 2026 ──────────────────────────────────────────────────────────────
+  {
+    id: 'labster-accessibility-ai',
+    title: 'AI Simulation Accessibility Uplift',
+    emoji: '♿',
+    description:
+      'Developing an AI-driven system to automatically uplift legacy VR/3D simulations for web accessibility. ' +
+      'The system analyzes legacy code and assets to inject ARIA readout text, descriptive tooltips, ' +
+      'smart autocompletes, and keyboard-navigable paths. This ensures hundreds of specialized science ' +
+      'simulations meet modern accessibility standards without requiring manual per-simulation refactoring.',
+    companyId: 'labster',
+    company: 'Labster',
+    period: 'Feb 2026 – Present',
+  },
+
+  // ── 2025 ──────────────────────────────────────────────────────────────
   {
     id: 'labster-automation',
     title: 'AI Course Automation System',
@@ -40,10 +55,8 @@ export const projects: Project[] = [
       'pedagogical frameworks.',
     companyId: 'labster',
     company: 'Labster',
-    period: 'Apr 2025 – Present',
+    period: 'Apr 2025 – Jan 2026',
   },
-
-  // ── Freelance ─────────────────────────────────────────────────────────────
   {
     id: 'video-movement-prediction',
     title: 'Video Movement Prediction Model',
@@ -54,10 +67,10 @@ export const projects: Project[] = [
       '(NDA — further details confidential.)',
     companyId: 'freelance',
     company: 'Freelance',
-    period: 'Mar – Jun 2025',
+    period: 'Mar 2025 – Jun 2025',
   },
 
-  // ── SNGULAR ───────────────────────────────────────────────────────────────
+  // ── 2024 ──────────────────────────────────────────────────────────────
   {
     id: 'santander-ai-mvp',
     title: 'Banco Santander — Internal AI MVP',
@@ -73,18 +86,66 @@ export const projects: Project[] = [
     period: 'Dec 2024 – Mar 2025',
   },
   {
+    id: 'uve-valuation-ai',
+    title: 'AI Automated Property Valuation',
+    emoji: '📸',
+    description:
+      'Developed an AI system to estimate property costs by analyzing interior photos. ' +
+      'Used image embeddings to train custom Machine Learning models that automatically ' +
+      'rated the state of specific rooms (from 0 to 1). The system compared these ratings ' +
+      'against an internal valuation database to provide objective, data-driven cost estimates.',
+    companyId: 'sngular',
+    company: 'UVE Valoraciones',
+    period: 'Aug 2024 – Dec 2024',
+    links: [
+      { label: '🌐 v-valoraciones.com', url: 'https://v-valoraciones.com/', type: 'primary' },
+    ],
+  },
+  {
     id: 'real-estate-ai',
     title: 'Real Estate Document Analysis Platform',
     emoji: '🏠',
     description:
-      'Built an end-to-end AI pipeline that ingested legal and technical property documents ' +
-      '(contracts, cadastral records, technical reports) and extracted structured data into a ' +
-      'relational database. The system replaced manual expert review — previously a bottleneck ' +
-      'of hours per property — with automated analysis running in minutes, enabling fast and ' +
-      'consistent real estate due diligence at scale.',
+      'Built an end-to-end AI pipeline for UVE Valoraciones that ingested legal and technical ' +
+      'property documents (contracts, cadastral records, technical reports) and extracted ' +
+      'structured data into a relational database. The system replaced manual expert review, ' +
+      'enabling fast and consistent real estate due diligence at scale.',
     companyId: 'sngular',
-    company: 'SNGULAR',
-    period: '2024',
+    company: 'UVE Valoraciones',
+    period: 'Jan 2024 – Jul 2024',
+    links: [
+      { label: '🌐 v-valoraciones.com', url: 'https://v-valoraciones.com/', type: 'primary' },
+    ],
+  },
+
+  // ── 2023 ──────────────────────────────────────────────────────────────
+  {
+    id: 'junction-2023-rag',
+    title: 'Knowledge Graph Visualization & RAG',
+    emoji: '🌐',
+    description:
+      'Participated in Helsinki International Junction 2023 among 1,000 international participants. ' +
+      'Developed an internal knowledge graph visualization system (similar to Obsidian) using a ' +
+      'RAG (Retrieval-Augmented Generation) pipeline for intelligent data exploration.',
+    companyId: 'side',
+    company: 'Side Project',
+    period: 'Nov 2023',
+  },
+  {
+    id: 'junction-malaga-steganography',
+    title: 'Examfy — Image Leak Detection System',
+    emoji: '🔐',
+    description:
+      'Winner of the Local Málaga Junction Hackathon (earning a spot for Helsinki International Junction). ' +
+      'Developed a steganographic system for Examfy to insert hidden tracking codes into school images. ' +
+      'This allowed identifying the source of any leaked materials by tracing back the personal copy ' +
+      'to the original recipient.',
+    companyId: 'side',
+    company: 'Side Project',
+    period: 'Oct 2023',
+    links: [
+      { label: '🚀 Live Demo', url: 'https://snapguard.streamlit.app/', type: 'primary' },
+    ],
   },
   {
     id: 'embassy-basketball-ai',
@@ -98,13 +159,46 @@ export const projects: Project[] = [
       'Designed to run in real time during training sessions with no manual tagging required.',
     companyId: 'sngular',
     company: 'SNGULAR',
-    period: 'Summer 2023',
+    period: 'Jul 2023 – Aug 2023',
     links: [
       {
-        label: 'The Embassy',
-        url: 'https://en.wikipedia.org/wiki/Carlos_Jim%C3%A9nez_Calder%C3%B3n',
-        type: 'outline',
+        label: '🌐 theembassytc.com',
+        url: 'https://www.theembassytc.com/',
+        type: 'primary',
       },
+    ],
+  },
+  {
+    id: 'mlops-cookbook',
+    title: 'MLOps Cookbook',
+    emoji: '👨‍🍳',
+    description:
+      'Designed and delivered a comprehensive MLOps curriculum. Covers the full lifecycle: ' +
+      'experiment tracking with MLflow, containerisation with Docker, CI/CD pipelines for ML, ' +
+      'and model serving. Includes a hands-on "cookbook" repository used by students to master ' +
+      'production-grade Machine Learning workflows.',
+    companyId: 'codespace',
+    company: 'Codespace Academy',
+    period: 'Jan 2023 – Dec 2025',
+    links: [
+      { label: '🚀 Course Web', url: 'https://matesanz.github.io/mlops-cookbook/', type: 'primary' },
+      { label: '💻 Repo', url: 'https://github.com/Matesanz/mlops-cookbook', type: 'outline' },
+    ],
+  },
+  {
+    id: 'python-ml-course',
+    title: 'Python for Machine Learning Cookbook',
+    emoji: '🐍',
+    description:
+      'Core curriculum for Machine Learning fundamentals. From Python basics and data manipulation ' +
+      'with Pandas/NumPy to building and evaluating deep learning models. This course serves as ' +
+      'the technical foundation for bootcamp students entering the AI field.',
+    companyId: 'codespace',
+    company: 'Codespace Academy',
+    period: 'Jan 2023 – Dec 2025',
+    links: [
+      { label: '🚀 Course Web', url: 'https://matesanz.github.io/python-machine-learning-course/', type: 'primary' },
+      { label: '💻 Repo', url: 'https://github.com/Matesanz/python-machine-learning-course', type: 'outline' },
     ],
   },
   {
@@ -114,17 +208,19 @@ export const projects: Project[] = [
     description:
       'Six-month intensive sprint: built the initial AI system from scratch and launched a fully ' +
       'working prototype for 3D computer vision padel performance analysis. PADMI went from zero ' +
-      'to a demo-ready product using multi-camera 3D tracking, pose estimation, and biomechanical ' +
+      'to a demo-ready product using multi-camera 3D tracking, size estimation, and biomechanical ' +
       'metrics. The system analysed player technique, shot speed, and court coverage in real time. ' +
       'Responsible for the full AI stack: camera calibration, stereo reconstruction, model ' +
       'training, and the analytics pipeline.',
     companyId: 'sngular',
     company: 'SNGULAR',
-    period: 'Jan – Jul 2023',
+    period: 'Jan 2023 – Jul 2023',
     links: [
       { label: '🌐 padmi.es', url: 'https://www.padmi.es/', type: 'primary' },
     ],
   },
+
+  // ── 2022 ──────────────────────────────────────────────────────────────
   {
     id: 'mercadona-cashierless',
     title: 'Mercadona — Cashierless Store MVP',
@@ -138,69 +234,107 @@ export const projects: Project[] = [
       'catalogue.',
     companyId: 'sngular',
     company: 'SNGULAR',
-    period: 'Mar – Dec 2022',
+    period: 'Mar 2022 – Dec 2022',
   },
-
-  // ── Codespace Academy ─────────────────────────────────────────────────────
   {
-    id: 'codespace-bootcamp',
-    title: 'ML Bootcamp Curriculum',
-    emoji: '🎓',
+    id: 'face-expression-recognition',
+    title: 'Face Expression Recognition',
+    emoji: '😄',
     description:
-      'Designed and delivered the full Machine Learning curriculum for Codespace Academy\'s ' +
-      'bootcamp cohorts. Covers Python fundamentals through advanced ML: supervised and ' +
-      'unsupervised learning, deep learning with PyTorch and TensorFlow, model evaluation, ' +
-      'and MLOps best practices — experiment tracking with MLflow, containerisation with Docker, ' +
-      'CI/CD pipelines, and model serving. Each cohort goes from zero to deploying a real ML ' +
-      'model in production.',
-    companyId: 'codespace',
-    company: 'Codespace Academy',
-    period: 'May 2023 – Present',
-  },
-
-  // ── Aeorum ────────────────────────────────────────────────────────────────
-  {
-    id: 'aeorum-drone-cv',
-    title: 'Drone Computer Vision Platform',
-    emoji: '🚁',
-    description:
-      'Built the computer vision platform powering Aeorum\'s drone fleet for agricultural ' +
-      'and renewable energy inspection. Implemented aerial object detection and tracking using ' +
-      'YOLO and SSD-MobileNet, deployed on both GPU servers and embedded systems (C++, Docker, ' +
-      'ROS). Developed a proprietary pipeline for generating multispectral GeoTIFFs from ' +
-      'multiple aerial cameras — enabling agronomists to assess crop health via wavelength ' +
-      'orthomosaics. Also built a thermal anomaly detection system for photovoltaic panel ' +
-      'inspection, and a Structure from Motion pipeline producing 3D point clouds from 2D ' +
-      'drone image sequences.',
-    companyId: 'aeorum',
-    company: 'Aeorum',
-    period: 'Sept 2020 – Mar 2022',
-  },
-
-  // ── University of Malaga ──────────────────────────────────────────────────
-  {
-    id: 'dias2p-streetqr',
-    title: 'DIAS2P / StreetQR — Pedestrian Safety System',
-    emoji: '🚦',
-    description:
-      'Part of the Smart-Campus I research projects at the University of Malaga. Built an ' +
-      'embedded computer vision system that attached to traffic signs and detected pedestrians ' +
-      'in real time, triggering audio and visual warnings to alert drivers — reducing the risk ' +
-      'of car-pedestrian collisions. Used YOLO, SSD-MobileNet, and Mask-RCNN running on a ' +
-      'Jetson Nano, with Hungarian Algorithm-based object tracking. Also designed the electronic ' +
-      'actuator architecture (lights and sound) and built a Firebase API to log crossing ' +
-      'statistics. Research published at CIPI 2019.',
-    companyId: 'uma',
-    company: 'Univ. Malaga',
-    period: 'Dec 2018 – Mar 2020',
+      'End-to-end facial expression recognition pipeline: face keypoint detection for data ' +
+      'acquisition, geometric normalization to suppress head rotation, manual labeling of six ' +
+      'expression classes (normal, angry, happy, sad, surprised, winking), k-NN classifier ' +
+      'training, and live webcam inference. Deployed as an interactive Streamlit app — anyone ' +
+      'in the audience could test it live during the talk.',
+    companyId: 'side',
+    company: 'Side Project',
+    period: 'May 2022',
     links: [
-      { label: '📄 CIPI 2019 Paper', url: 'https://riuma.uma.es/xmlui/bitstream/handle/10630/18443/CIPI_2019_paper_37.pdf', type: 'primary' },
-      { label: '💻 DIAS2P', url: 'https://github.com/Matesanz/DIAS2P', type: 'outline' },
-      { label: '💻 StreetQR', url: 'https://github.com/Matesanz/StreetQR', type: 'outline' },
+      { label: '🚀 Live Demo', url: 'https://face-expression-recognition.streamlit.app/', type: 'primary' },
+      { label: '💻 Code', url: 'https://github.com/Matesanz/face-expression-recognition', type: 'outline' },
     ],
   },
 
-  // ── Monkeat ───────────────────────────────────────────────────────────────
+  // ── 2021 ──────────────────────────────────────────────────────────────
+  {
+    id: 'aeorum-embedded-tracking',
+    title: 'Embedded People & Car Tracking',
+    emoji: '🚗',
+    description:
+      'Implemented real-time aerial object detection and tracking (people and vehicles) ' +
+      'using YOLO and SSD-MobileNet. Deployed these models on both GPU servers and ' +
+      'resource-constrained embedded systems on-board drones, ensuring low-latency performance ' +
+      'for critical surveillance and monitoring tasks.',
+    companyId: 'aeorum',
+    company: 'Aeorum',
+    period: 'Dec 2021 – Mar 2022',
+  },
+  {
+    id: 'aeorum-solar-panels',
+    title: 'Autonomous Solar Panel Inspection',
+    emoji: '☀️',
+    description:
+      'Built a thermal anomaly detection system for autonomous photovoltaic panel inspection ' +
+      'using drone imagery. Developed Computer Vision models to identify hotspots and ' +
+      'malfunctions on solar farms, significantly reducing inspection time compared to ' +
+      'manual methods.',
+    companyId: 'aeorum',
+    company: 'Aeorum',
+    period: 'Jul 2021 – Nov 2021',
+  },
+  {
+    id: 'pet-detector',
+    title: 'Pet Detector with YOLOv3',
+    emoji: '🐈',
+    description:
+      'Custom YOLOv3 object detection model trained from scratch to recognise a specific cat ' +
+      '(Mocka 😂). Used the ImageAI library inside a Jupyter Notebook, covering the full ' +
+      'pipeline: collecting hundreds of photos, annotating bounding boxes, training, and ' +
+      'validating with the mAP metric. Presented live at TabularConf 2021, my first national ' +
+      'conference.',
+    companyId: 'side',
+    company: 'Side Project',
+    period: 'Jan 2021',
+    links: [
+      { label: '▶ Watch Talk', url: 'https://www.youtube.com/watch?v=Fr8t0SuHASA', type: 'primary' },
+      { label: '💻 Code', url: 'https://github.com/Matesanz/pet-detector', type: 'outline' },
+    ],
+  },
+
+  // ── 2020 ──────────────────────────────────────────────────────────────
+  {
+    id: 'aeorum-orthophotos',
+    title: 'Multispectral Orthomosaic Pipeline',
+    emoji: '🗺️',
+    description:
+      'Developed a proprietary pipeline for generating high-resolution multispectral GeoTIFFs ' +
+      'from multiple aerial drone cameras. This enabled agronomists to assess crop health via ' +
+      'wavelength orthomosaics. Built using C++, Docker, and ROS to handle large-scale image ' +
+      'stitching and geographic coordinate alignment.',
+    companyId: 'aeorum',
+    company: 'Aeorum',
+    period: 'Sep 2020 – Jul 2021',
+  },
+  {
+    id: 'mri-superresolution',
+    title: 'MRI Super-Resolution with GANs',
+    emoji: '🧠',
+    description:
+      'Master\'s thesis project (graduated with honors): developed a 3D MRI super-resolution ' +
+      'model using Generative Adversarial Networks (WGAN-GP), achieving a 4× improvement in ' +
+      'image quality. The model learned to reconstruct high-resolution volumetric MRI scans ' +
+      'from low-resolution inputs, with potential applications in reducing scan time and ' +
+      'improving diagnostic quality in resource-constrained settings.',
+    companyId: 'side',
+    company: 'Side Project',
+    period: 'Mar 2020 – Jun 2020',
+    links: [
+      { label: '📄 Thesis', url: 'https://1drv.ms/b/s!AgDuqWQZkjwxj79zyt5colGiRdNT1g?e=1cslcH', type: 'primary' },
+      { label: '💻 Code', url: 'https://github.com/Matesanz/WGAN-GP_MRI_Super_Resolution', type: 'outline' },
+    ],
+  },
+
+  // ── 2019 ──────────────────────────────────────────────────────────────
   {
     id: 'monkeat-pwa',
     title: 'Monkeat — Live Marketplace PWA',
@@ -215,62 +349,41 @@ export const projects: Project[] = [
       'full-stack product as a first-time CTO was an invaluable experience.',
     companyId: 'monkeat',
     company: 'Monkeat',
-    period: 'Mar – Oct 2019',
+    period: 'Mar 2019 – Oct 2019',
   },
 
-  // ── Side Projects ─────────────────────────────────────────────────────────
+  // ── 2018 ──────────────────────────────────────────────────────────────
   {
-    id: 'mri-superresolution',
-    title: 'MRI Super-Resolution with GANs',
-    emoji: '🧠',
+    id: 'dias2p',
+    title: 'DIAS2P — Pedestrian Safety System',
+    emoji: '🚦',
     description:
-      'Master\'s thesis project (graduated with honors): developed a 3D MRI super-resolution ' +
-      'model using Generative Adversarial Networks (WGAN-GP), achieving a 4× improvement in ' +
-      'image quality. The model learned to reconstruct high-resolution volumetric MRI scans ' +
-      'from low-resolution inputs, with potential applications in reducing scan time and ' +
-      'improving diagnostic quality in resource-constrained settings.',
-    companyId: 'side',
-    company: 'Side Project',
-    period: '2019 – 2020',
+      'Part of the Smart-Campus I research projects at the University of Malaga. Built an ' +
+      'embedded computer vision system that attached to traffic signs and detected pedestrians ' +
+      'in real time, triggering audio and visual warnings to alert drivers — reducing the risk ' +
+      'of car-pedestrian collisions. Used YOLO, SSD-MobileNet, and Mask-RCNN running on a ' +
+      'Jetson Nano, with Hungarian Algorithm-based object tracking. Research published at CIPI 2019.',
+    companyId: 'uma',
+    company: 'Univ. Malaga',
+    period: 'Dec 2018 – Mar 2020',
     links: [
-      { label: '📄 Thesis', url: 'https://1drv.ms/b/s!AgDuqWQZkjwxj79zyt5colGiRdNT1g?e=1cslcH', type: 'primary' },
-      { label: '💻 Code', url: 'https://github.com/Matesanz/WGAN-GP_MRI_Super_Resolution', type: 'outline' },
+      { label: '📄 CIPI 2019 Paper', url: 'https://riuma.uma.es/xmlui/bitstream/handle/10630/18443/CIPI_2019_paper_37.pdf', type: 'primary' },
+      { label: '💻 DIAS2P', url: 'https://github.com/Matesanz/DIAS2P', type: 'outline' },
     ],
   },
   {
-    id: 'face-expression-recognition',
-    title: 'Face Expression Recognition',
-    emoji: '😄',
+    id: 'streetqr',
+    title: 'StreetQR — Smart Campus Analytics',
+    emoji: '📱',
     description:
-      'End-to-end facial expression recognition pipeline: face keypoint detection for data ' +
-      'acquisition, geometric normalization to suppress head rotation, manual labeling of six ' +
-      'expression classes (normal, angry, happy, sad, surprised, winking), k-NN classifier ' +
-      'training, and live webcam inference. Deployed as an interactive Streamlit app — anyone ' +
-      'in the audience could test it live during the talk.',
-    companyId: 'side',
-    company: 'Side Project',
-    period: '2022',
+      'Developed a smart signage and analytics system for the University of Malaga campus. ' +
+      'Built a Firebase API to log and visualize pedestrian crossing statistics and interaction data. ' +
+      'Part of the larger Smart-Campus initiative focusing on urban mobility and data-driven infrastructure.',
+    companyId: 'uma',
+    company: 'Univ. Malaga',
+    period: 'Dec 2018 – Mar 2020',
     links: [
-      { label: '🚀 Live Demo', url: 'https://share.streamlit.io/matesanz/face-expression-recognition/main/app/main.py', type: 'primary' },
-      { label: '💻 Code', url: 'https://github.com/Matesanz/face-expression-recognition', type: 'outline' },
-    ],
-  },
-  {
-    id: 'pet-detector',
-    title: 'Pet Detector with YOLOv3',
-    emoji: '🐈',
-    description:
-      'Custom YOLOv3 object detection model trained from scratch to recognise a specific cat ' +
-      '(Mocka 😂). Used the ImageAI library inside a Jupyter Notebook, covering the full ' +
-      'pipeline: collecting hundreds of photos, annotating bounding boxes, training, and ' +
-      'validating with the mAP metric. Presented live at TabularConf 2021, my first national ' +
-      'conference.',
-    companyId: 'side',
-    company: 'Side Project',
-    period: '2021',
-    links: [
-      { label: '▶ Watch Talk', url: 'https://www.youtube.com/watch?v=Fr8t0SuHASA', type: 'primary' },
-      { label: '💻 Code', url: 'https://github.com/Matesanz/pet-detector', type: 'outline' },
+      { label: '💻 StreetQR', url: 'https://github.com/Matesanz/StreetQR', type: 'outline' },
     ],
   },
   {
@@ -285,7 +398,7 @@ export const projects: Project[] = [
       'continues to grow the local AI community.',
     companyId: 'side',
     company: 'Side Project',
-    period: '2018 – Present',
+    period: 'Sep 2018 – Dec 2023',
     links: [
       { label: '🐦 Twitter', url: 'https://twitter.com/aimalaga', type: 'outline' },
     ],
